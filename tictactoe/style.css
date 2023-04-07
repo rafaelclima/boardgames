@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1d1d1d;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  overflow-y: hidden;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-size: 48px;
+}
+
+.game {
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 298px;
+  margin: 0 auto;
+  border: 2px solid #fff;
+}
+
+.cell {
+  flex-basis: 100px;
+  height: 100px;
+  margin: -2px 0 0 -2px;
+  background-color: #333;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: #444;
+}
+
+.cell.x::before {
+  content: "X";
+  font-size: 72px;
+  line-height: 1;
+  color: red;
+}
+
+.cell.o::before {
+  content: "O";
+  font-size: 72px;
+  line-height: 1;
+}
+
+.players {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#new-game {
+  width: 100%;
+  border-radius: 0;
+}
+
+input[type="text"],
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  background-color: #2ecc71;
+  color: #fff;
+  margin: 0 10px;
+}
+
+input[type="text"]::placeholder {
+  color: #fff;
+}
+
+.timeP1, .timeP2 {
+  animation: pulse 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.15);
+  }
+}
+
+button:hover {
+  background-color: #27ae60;
+}
+
+.winner-message {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  display: none;
+}
+
+.winner span {
+  color: #2ecc71;
+}
+
+.tie span {
+  color: #f1c40f;
+}
+
+
+@media only screen and (max-width: 630px) and (min-width: 320px) {
+  input[type="text"] {
+    width: 215px;
+    margin: 10px 10px;
+    padding: 5px 10px;
+    border-radius: 14px;
+  }
+
+  button {
+    margin: 10px 10px;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  .game {
+    margin-bottom: 20px;
+  }
+
+  .container {
+    padding: 10px 20px;
+    max-height: 88vh;
+  }
+
+  .winner-message {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .players {
+    margin-bottom: 0px;
+  }
+}

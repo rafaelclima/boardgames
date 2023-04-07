@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
+  <title>Jogo da Forca</title>
+</head>
+<body>
+  <h1 id="title-game">Jogo da Forca</h1>
+  <div id="lives-container">
+    <div id="main_img">
+      <div id="base-forca">        
+
+      </div>
+      <!-- <img src="./main_forca.png" id="main-forca"> -->
+      <div id="boneco_forca">
+        <img src="./img/cabeça_forca.png" id="cabeca_forca">
+        <img src="./img/corpo_forca.png" id="corpo_forca">
+        <img src="./img/pernaE_forca.png" id="pernaE_forca">
+        <img src="./img/pernaD_forca.png" id="pernaD_forca">
+      </div>
+    </div>
+  </div>
+  <div id="word-container">
+  </div>
+  <div id="alphabet-container">
+    <button type="button" value="a" class="letra-apertada">A</button>
+    <button type="button" value="b" class="letra-apertada">B</button>
+    <button type="button" value="c" class="letra-apertada">C</button>
+    <button type="button" value="d" class="letra-apertada">D</button>
+    <button type="button" value="e" class="letra-apertada">E</button>
+    <button type="button" value="f" class="letra-apertada">F</button>
+    <button type="button" value="g" class="letra-apertada">G</button>
+    <button type="button" value="h" class="letra-apertada">H</button>
+    <button type="button" value="i" class="letra-apertada">I</button>
+    <button type="button" value="j" class="letra-apertada">J</button>
+    <button type="button" value="k" class="letra-apertada">K</button>
+    <button type="button" value="l" class="letra-apertada">L</button>
+    <button type="button" value="m" class="letra-apertada">M</button>
+    <button type="button" value="n" class="letra-apertada">N</button>
+    <button type="button" value="o" class="letra-apertada">O</button>
+    <button type="button" value="p" class="letra-apertada">P</button>
+    <button type="button" value="q" class="letra-apertada">Q</button>
+    <button type="button" value="r" class="letra-apertada">R</button>
+    <button type="button" value="s" class="letra-apertada">S</button>
+    <button type="button" value="t" class="letra-apertada">T</button>
+    <button type="button" value="u" class="letra-apertada">U</button>
+    <button type="button" value="v" class="letra-apertada">V</button>
+    <button type="button" value="w" class="letra-apertada">W</button>
+    <button type="button" value="x" class="letra-apertada">X</button>
+    <button type="button" value="y" class="letra-apertada">Y</button>
+    <button type="button" value="z" class="letra-apertada">Z</button>
+    <button type="button" value="á" class="letra-apertada">Á</button>
+    <button type="button" value="à" class="letra-apertada">À</button>
+    <button type="button" value="â" class="letra-apertada">Â</button>
+    <button type="button" value="ã" class="letra-apertada">Ã</button>
+    <button type="button" value="é" class="letra-apertada">É</button>
+    <button type="button" value="è" class="letra-apertada">È</button>
+    <button type="button" value="ê" class="letra-apertada">Ê</button>
+    <button type="button" value="í" class="letra-apertada">Í</button>
+    <button type="button" value="ì" class="letra-apertada">Ì</button>
+    <button type="button" value="î" class="letra-apertada">Î</button>
+    <button type="button" value="ó" class="letra-apertada">Ó</button>
+    <button type="button" value="ò" class="letra-apertada">Ò</button>
+    <button type="button" value="ô" class="letra-apertada">Ô</button>
+    <button type="button" value="õ" class="letra-apertada">Õ</button>
+    <button type="button" value="ú" class="letra-apertada">Ú</button>
+    <button type="button" value="ù" class="letra-apertada">Ù</button>
+    <button type="button" value="û" class="letra-apertada">Û</button>
+    <button type="button" value="ç" class="letra-apertada">Ç</button>
+  </div>
+
+  <div id="result-container">
+
+    <div id="texto_final"></div>
+
+    <div id="dica_chance">
+
+      <div id="div_dica">
+        <h3>Dica</h3>
+        <span id="span_dica">
+        </span>
+      </div>
+
+      <div id="div_chances">
+        <h3>Chances</h3>
+        <span id="span_chances">          
+        </span>
+      </div>
+      
+    </div>
+
+    <button type="button" onclick="reiniciarJogo()">Restart Game</button>
+
+  </div>
+</body>
+</html>
