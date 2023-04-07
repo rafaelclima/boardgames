@@ -27,6 +27,6 @@ function forca() {
 }
 
 function memory() {
-  window.location.href = "./memory/index.html";
+  window.location.href = "./memoria/index.html";
 }
 
