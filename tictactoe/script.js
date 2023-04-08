@@ -86,13 +86,16 @@ divs.forEach(function (divSel) {
             const [elemDiv1, elemDiv2, elemDiv3] = divVencedor[0]
             divs.forEach(function (divsVencedoras){
               if(divsVencedoras.id == elemDiv1) {
-                divsVencedoras.style.backgroundColor = "red"
+                divsVencedoras.style.backgroundColor = "#A81821"
+                divsVencedoras.style.animation = 'rotate-pulse 3s ease-in-out infinite'
               }
               if(divsVencedoras.id == elemDiv2) {
-                divsVencedoras.style.backgroundColor = "red"
+                divsVencedoras.style.backgroundColor = "#A81821"
+                divsVencedoras.style.animation = 'rotate-pulse 3s ease-in-out infinite'
               }
               if(divsVencedoras.id == elemDiv3) {
-                divsVencedoras.style.backgroundColor = "red"
+                divsVencedoras.style.backgroundColor = "#A81821"
+                divsVencedoras.style.animation = 'rotate-pulse 3s ease-in-out infinite'
               }
             })
 
@@ -175,13 +178,16 @@ divs.forEach(function (divSel) {
             const [elemDiv1, elemDiv2, elemDiv3] = divVencedor[0]
             divs.forEach(function (divsVencedoras){
               if(divsVencedoras.id == elemDiv1) {
-                divsVencedoras.style.backgroundColor = "#2ecc71"
+                divsVencedoras.style.backgroundColor = "#A81821"
+                divsVencedoras.style.animation = 'rotate-pulse 3s ease-in-out infinite'
               }
               if(divsVencedoras.id == elemDiv2) {
-                divsVencedoras.style.backgroundColor = "#2ecc71"
+                divsVencedoras.style.backgroundColor = "#A81821"
+                divsVencedoras.style.animation = 'rotate-pulse 3s ease-in-out infinite'
               }
               if(divsVencedoras.id == elemDiv3) {
-                divsVencedoras.style.backgroundColor = "#2ecc71"
+                divsVencedoras.style.backgroundColor = "#A81821"
+                divsVencedoras.style.animation = 'rotate-pulse 3s ease-in-out infinite'
               }
             })
 
@@ -242,28 +248,33 @@ restartGame.addEventListener('click', function(){
 })
 
 function winnerMessage() {
+  inputNameP1.classList.remove('timeP1');
+  inputNameP2.classList.remove('timeP2');
+  const formPlayer = document.getElementById('form-player')
+  formPlayer.style.visibility = 'hidden'
+  formPlayer.style.opacity = 0
   const message = document.getElementById('winner-message')
   const span = document.createElement('span')
   span.innerText = 'We Are the Champions!!!\n' + "Parabéns " + namePlayer
   message.appendChild(span)
   message.setAttribute('class', 'winner-message winner')
   message.style.display = "inline-block";
-  inputNameP1.classList.remove('timeP1');
-  inputNameP2.classList.remove('timeP2');
-  if (player === 1) {
-    inputNameP1.setAttribute('class', 'timeP1')
-  }else {
-    inputNameP2.setAttribute('class', 'timeP2')
-  }  
+  message.style.visibility = 'visible'
+  message.style.opacity = 1
 }
 
 function tieMessage() {
+  const formPlayer = document.getElementById('form-player')
+  formPlayer.style.visibility = 'hidden'
+  formPlayer.style.opacity = 0
   const message = document.getElementById('winner-message')
   const span = document.createElement('span')  
   span.innerText = 'Vocês são incríveis\n' + 'JOGO TERMINOU EMPATADO'
   message.appendChild(span)
   message.setAttribute('class', 'winner-message tie')
   message.style.display = "inline-block";
+  message.style.visibility = 'visible'
+  message.style.opacity = 1
   inputNameP2.setAttribute('class', 'timeP2')
   inputNameP1.setAttribute('class', 'timeP1')
 }

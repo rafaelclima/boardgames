@@ -8,7 +8,13 @@ body {
   background-color: #1d1d1d;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
+  text-align: center;
+}
+
+.logo-img {
+  width: 70%;
+  margin: 16px 0px 16px 0px;
 }
 
 .container {
@@ -51,18 +57,28 @@ h1 {
 
 .cell.x::before {
   content: "X";
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 72px;
   line-height: 1;
-  color: red;
+  color: #fff;
 }
 
 .cell.o::before {
   content: "O";
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 72px;
   line-height: 1;
+  color: #07A82E;
 }
 
 .players {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -83,7 +99,7 @@ button {
   font-size: 16px;
   border-radius: 20px;
   border: none;
-  background-color: #2ecc71;
+  background-color: #f63c48;
   color: #fff;
   margin: 0 10px;
 }
@@ -102,58 +118,118 @@ input[type="text"]::placeholder {
   }
 
   to {
-    transform: scale(1.15);
+    transform: scale(1.10);
+  }
+}
+
+@keyframes rotate-pulse {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(360deg) scale(1.15);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
   }
 }
 
 button:hover {
-  background-color: #27ae60;
+  background-color: #f63c488a;
 }
 
 .winner-message {
+  position: absolute;
+  top: 10%;
   font-size: 24px;
   font-weight: bold;
   margin-top: 20px;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  /* display: none; */
 }
 
 .winner span {
-  color: #2ecc71;
+  color: #f63c48;
 }
 
 .tie span {
-  color: #f1c40f;
+  color: #FA6730;
 }
 
 
-@media only screen and (max-width: 630px) and (min-width: 320px) {
-  input[type="text"] {
-    width: 215px;
-    margin: 10px 10px;
-    padding: 5px 10px;
-    border-radius: 14px;
-  }
+@media only screen and (min-width: 320px) and (max-width: 480px) {
 
-  button {
-    margin: 10px 10px;
-  }
-
-  h1 {
-    margin-bottom: 20px;
-    font-size: 36px;
-  }
-
-  label {
-    font-size: 16px;
-  }
-
-  .game {
-    margin-bottom: 20px;
+  .logo-img {
+    width: 70%;
+    height: 55px;
+    margin: 32px 0px;
   }
 
   .container {
-    padding: 10px 20px;
-    max-height: 88vh;
+    padding: 0px 10px;
+    height: 100%;
+    width: 100%;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+
+  .game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 8px;
+  }
+
+  .board {
+    width: 95%;
+    height: 45vh;
+    border: 1px solid #fff;
+  }
+
+  .cell {
+    flex-basis: 33.33333%;
+    margin: 0px;
+    height: 33.3%;
+  }
+
+  .cell.x::before,
+  .cell.o::before {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .players {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+
+  form {
+    width: 90%;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  input[type="text"] {
+    width: 70%;
+    margin: 5px 5px;
+    padding: 10px 10px;
+    border-radius: 4px;
+  }
+
+  label {
+    width: 20%;
+    font-size: 16px;
   }
 
   .winner-message {
@@ -161,7 +237,8 @@ button:hover {
     margin-top: 10px;
   }
 
-  .players {
-    margin-bottom: 0px;
+  button {
+    max-width: 80vw;
+    margin: 10px 0px 5px 0px;
   }
 }

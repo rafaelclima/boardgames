@@ -9,6 +9,7 @@
   <title>TicTacToe - Jogo da Velha</title>
 </head>
 <body>
+  <img src="/img/logo_nobg.png" alt="Logomarca Stayground" class="logo-img">
   <div class="container">
     <h1>Jogo da Velha</h1>
     <div class="game">
@@ -24,13 +25,16 @@
         <div class="cell" id="9"></div>
       </div>
       <div class="players">
-        <label for="player1">Jogador 1</label>
-        <input type="text" id="player1">
-        <label for="player2">Jogador 2</label>
-        <input type="text" id="player2">
+        <form id="form-player">
+          <label for="player1">Jogador 1</label>
+          <input type="text" id="player1">
+          <label for="player2">Jogador 2</label>
+          <input type="text" id="player2">
+        </form>
         <button id="new-game">Restart Game</button>
+        <div class="winner-message" id="winner-message">
+        </div>
       </div>
-      <div class="winner-message" id="winner-message"></div>
     </div>
   </div>
 </body>
