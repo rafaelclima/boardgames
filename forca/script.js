@@ -216,7 +216,7 @@ function telaVitoria() {
 
   // Muda a imagem do background
   setTimeout(function() {
-  retirarBaseForca.style.backgroundImage = "url(./donkey_celebration.gif)";
+  retirarBaseForca.style.backgroundImage = "url(img/donkey_celebration.gif)";
   document.querySelector("#base-forca").style.width = "80vw";
   }, 100)
 
@@ -253,7 +253,7 @@ function telaDerrota() {
 
   // Muda a imagem do background
   setTimeout(function() {
-    retirarBaseForca.style.backgroundImage = "url(./pikachu_sad.gif)";
+    retirarBaseForca.style.backgroundImage = "url(img/pikachu_sad.gif)";
     document.querySelector("#base-forca").style.width = "80vw";
   }, 100)
 
