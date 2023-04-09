@@ -121,7 +121,7 @@ const arrPalavras = [
   },
     {
     palavra: "revista",
-    dica: "tá na sua mão ou você está nas mãos de alguém."
+    dica: "um pouco obsoleto nos dias de hoje."
   }
   
 ];
@@ -138,14 +138,14 @@ const divTextoFinal = document.getElementById('texto_final')
 
 const palavraOculta = function() {
   for (let i = 0; i < arrPalavras[palavraSorteada].palavra.length; i++) {
+    const criarSpanDica = document.getElementById('span_dica')
+    criarSpanDica.innerText = arrPalavras[palavraSorteada].dica
+    spanChances.innerHTML = chances
+
     const newSpan = document.createElement('span')
     newSpan.innerText = '_'
     newSpan.id = i
     spanLetraOculta.append(newSpan)
-
-    const criarSpanDica = document.getElementById('span_dica')
-    criarSpanDica.innerText = arrPalavras[palavraSorteada].dica
-    spanChances.innerHTML = chances
   }
 }
 palavraOculta()
@@ -241,32 +241,14 @@ function telaVitoria() {
 
   retiraDivBoneco.style.display = 'none'
 
-  // const retiraCabeca = document.getElementById('cabeca_forca')
-  // retiraCabeca.style.transition = "opacity .8s ease-in-out";
-  // const retiraCorpo = document.getElementById('corpo_forca')
-  // retiraCorpo.style.transition = "opacity .8s ease-in-out";
-  // const retiraPernaE = document.getElementById('pernaE_forca')
-  // retiraPernaE.style.transition = "opacity .8s ease-in-out";
-  // const retiraPernaD = document.getElementById('pernaD_forca')
-  // retiraPernaD.style.transition = "opacity .8s ease-in-out";
-
-  // setTimeout(function() {
-  //   // defina a opacidade para 1 para que o elemento apareça gradualmente
-  //   retiraCabeca.style.opacity = 0;
-  //   retiraCorpo.style.opacity = 0;
-  //   retiraPernaE.style.opacity = 0;
-  //   retiraPernaD.style.opacity = 0;
-  
-  // }, 80);
-
   // Muda a imagem do background
   setTimeout(function() {
   retirarBaseForca.style.backgroundImage = "url(img/donkey_celebration.gif)";
   document.querySelector("#base-forca").style.width = "80vw";
+  retiraDicaChance.style.display = 'none'
   }, 100)
 
-  retirarTitulo.innerText = 'VOCÊ VENCEU!!'
-  retiraDicaChance.style.display = 'none'
+  
 }
 
 function telaDerrota() {
@@ -284,7 +266,7 @@ function telaDerrota() {
   // const retiraPernaD = document.getElementById('pernaD_forca')
   // retiraPernaD.style.transition = "opacity .9s ease-in-out";
 
-  retirarTitulo.innerText = 'VOCÊ PERDEU!!'
+  // retirarTitulo.innerText = 'VOCÊ PERDEU!!'
   retiraDivBoneco.style.display = 'none'
 
   // setTimeout(function() {
