@@ -77,8 +77,53 @@ const arrPalavras = [
   },
     {
     palavra: "relógio",
-    dica: "Um objeto."
+    dica: "Objeto criado em 725 d.C."
+  },
+    {
+    palavra: "apartamento",
+    dica: "abriga pessoas."
+  },
+    {
+    palavra: "cadeado",
+    dica: "Impede ou dificulta o acesso."
+  },
+    {
+    palavra: "castelo",
+    dica: "Comum na idade média."
+  },
+    {
+    palavra: "liberdade",
+    dica: "nem todos a tem."
+  },
+    {
+    palavra: "aquecimento",
+    dica: "do planeta ou do atleta?"
+  },
+    {
+    palavra: "infortúnio",
+    dica: "desgraça e má sorte."
+  },
+    {
+    palavra: "categoria",
+    dica: "Grau negativo ou positivo de excelência."
+  },
+    {
+    palavra: "cientista",
+    dica: "Seu trabalho é estudar."
+  },
+    {
+    palavra: "terraplanagem",
+    dica: "termo técnico da engenharia."
+  },
+    {
+    palavra: "companhia",
+    dica: "easy - currahee."
+  },
+    {
+    palavra: "revista",
+    dica: "tá na sua mão ou você está nas mãos de alguém."
   }
+  
 ];
 
 const palavraSorteada = Math.floor(Math.random() * arrPalavras.length)

@@ -2,7 +2,11 @@
         background-color: #1d1d1d;
         color: #fff;
         font-family: 'Open Sans', sans-serif;
-        overflow-y: hidden;
+        /* overflow-y: hidden; */
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
       }
 
       h1 {
@@ -37,6 +41,7 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 2rem;
+        /* flex-grow: 1; */
       }
 
       #alphabet-container button {
@@ -142,9 +147,8 @@
 
         #base-forca {
           background-image: url('img/main_forca.png');
-          width: 240px;
-          height: 170px;
-          border-radius: 8px;
+          width: 210px;
+          height: 150px;
           background-size: cover;
           background-position: center;
           transition: background-image 1s ease;
@@ -252,31 +256,31 @@
         #corpo_forca,
         #pernaE_forca,
         #pernaD_forca {
-          width: 20px;
-          height: 20px;
+          width: 10px;
+          height: 10px;
         }
 
         #cabeca_forca {
           opacity: 0;
-          top: 32px;
-          left: 142px;
+          top: 24px;
+          left: 122px;
         }
 
         #corpo_forca {
           opacity: 0;
-          top: 64px;
-          left: 143px;
+          top: 56px;
+          left: 122px;
         }
 
         #pernaE_forca {
           opacity: 0;
-          top: 94px;
-          left: 118px;
+          top: 88px;
+          left: 96px;
         }
 
         #pernaD_forca {
-          opacity: 0;
-          top: 94px;
-          left: 168px;
+          opacity: 1;
+          top: 87px;
+          left: 148px;
         }
       }
