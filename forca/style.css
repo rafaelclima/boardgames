@@ -11,7 +11,7 @@
       }
 
       .titulo-base {
-        height: 32vh;
+        height: 30vh;
         width: 100%;
       }
 
@@ -24,7 +24,7 @@
       }
 
       .letras-teclado {
-        height: 38vh;
+        height: 33vh;
         width: 100%;
       }
 
@@ -343,8 +343,8 @@
         /* Aumenta o tamanho dos botões de letra */
         #alphabet-container button {
           font-size: .6rem;
-          margin: 0.25rem;
-          padding: 0.6rem 0.85rem;
+          margin: 0.15rem;
+          padding: 0.6rem 0.8rem;
         }
 
         #lives-container {
