@@ -6,31 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Memória</title>
-    <link rel="stylesheet" type="text/css" href="/index.css">
-    <script type="text/javascript" src="/index.js" defer=""></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="index.js" defer=""></script>
   </head>
 
   <body>
+    <div class="logo-img">
+      <img src="/img/logo_nobg.png" alt="Logomarca Stayground">
+    </div>  
     <main id="memory-game">
-      <div class="board">
-        <div class="tile"><span class="memory-item"></span></div>
-        <div class="tile"><span class="memory-item"></span></div>
-        <div class="tile"><span class="memory-item"></span></div>
-        <div class="tile"><span class="memory-item"></span></div>
-        <div class="tile"><span class="memory-item"></span></div>
-        <div class="tile"><span class="memory-item"></span></div>
-        <div class="tile"><span class="memory-item"></span></div>
-        <div class="tile"><span class="memory-item"></span></div>
-        <div class="tile"><span class="memory-item"></span></div>
-        <div class="tile"><span class="memory-item"></span></div>
-        <div class="tile"><span class="memory-item"></span></div>
-        <div class="tile"><span class="memory-item"></span></div>
-        <div class="tile"><span class="memory-item"></span></div>
-        <div class="tile"><span class="memory-item"></span></div>
-        <div class="tile"><span class="memory-item"></span></div>
-        <div class="tile"><span class="memory-item"></span></div>
+      <div class="board-box">
+        <div class="board" id="board-game">
+          <img src="./img/img-start.png" id="img-start">
+          <img src="./img/img_winner.gif" id="img-winner">
+          <div class="tile"><span class="memory-item"></span></div>
+          <div class="tile"><span class="memory-item"></span></div>
+          <div class="tile"><span class="memory-item"></span></div>
+          <div class="tile"><span class="memory-item"></span></div>
+          <div class="tile"><span class="memory-item"></span></div>
+          <div class="tile"><span class="memory-item"></span></div>
+          <div class="tile"><span class="memory-item"></span></div>
+          <div class="tile"><span class="memory-item"></span></div>
+          <div class="tile"><span class="memory-item"></span></div>
+          <div class="tile"><span class="memory-item"></span></div>
+          <div class="tile"><span class="memory-item"></span></div>
+          <div class="tile"><span class="memory-item"></span></div>
+          <div class="tile"><span class="memory-item"></span></div>
+          <div class="tile"><span class="memory-item"></span></div>
+          <div class="tile"><span class="memory-item"></span></div>
+          <div class="tile"><span class="memory-item"></span></div>
+        </div>
       </div>
-      <button type="button" onclick="startGame()" class="btn">Start Game</button>
+
+      <div id="resultado-final">
+        <h3>Pontuação Total:</h3>
+        <p><span id="nome-p1"></span>: <span id="pontuacao-p1"></span> pontos</p>
+        <p><span id="nome-p2"></span>: <span id="pontuacao-p2"></span> pontos</p>
+      </div>
+      <form>
+        <div class="input-group">
+          <label for="jogador1">Jogador 1</label>
+          <input type="text" id="jogador1" name="jogador1">
+        </div>
+  
+        <div class="input-group">
+          <label for="jogador2">Jogador 2</label>
+          <input type="text" id="jogador2" name="jogador2">
+        </div>
+      </form>
+
+      <button type="button" onclick="startGame()" class="btn" id="restart-game">Start Game</button>
     </main>
 
 

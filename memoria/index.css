@@ -1,21 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
 body {
   background-color: #1c1c1c;
 }
 
+:root {
+  --cor-primaria: #f43c4c;
+}
+
+.logo-img {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.logo-img img {
+  width: 60%;
+}
+
 #memory-game {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: calc(100vh - 87px);
+}
+
+#img-start {
+  position: absolute;
+  width: 50%;
+  transition: all .6s ease-out;
+  z-index: 55;
+}
+
+#img-winner {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.board-box {
+  position: relative;
+  height: 48vh;
 }
 
 .board {
-  /* position: absolute;
-  top: 50%;
+  position: absolute;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%); */
-  width: 400px;
-  height: 100%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  /* height: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,9 +68,9 @@ body {
 
 .tile {
   position: relative;
-  width: 90px;
-  height: 90px;
-  margin: 5px;
+  width: 21vw;
+  height: 65px;
+  margin: 4px;
   background-color: #eee;
   border-radius: 10px;
   box-shadow: 2px 2px 5px #000000ae;
@@ -46,14 +89,20 @@ body {
   font-size: 16px;
 }
 
+.tile span img {
+  width: 20vw;
+  height: 61px;
+  border-radius: 10px;
+}
+
 .btn {
-  margin-top: 25px;
-  background-color: #007bff;
+  background-color: #f43c4c;
   color: #fff;
   border: none;
   border-radius: 20px;
+  margin-top: 1rem;
   padding: 12px 24px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -63,7 +112,139 @@ body {
 }
 
 .btn:hover {
-  background-color: #0062cc;
+  background-color: #FF5967;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
+}
+
+form {
+  width: 100%;
+}
+
+input[type="text"] {
+  position: absolute;
+  left: 130px;
+  bottom: 15px;
+  width: 60%;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #f2f2f2;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 0.8rem var(--cor-primaria);
+}
+
+label {
+  /* position: absolute; */
+  display: block;
+  margin-bottom: 1.25rem;
+  margin-left: 8%;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--cor-primaria);
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+label[for="jogador2"]:focus,
+input[name="jogador2"]:focus {
+  animation: pulse 1s ease-in-out infinite;
+}
+label[for="jogador1"]:focus,
+input[name="jogador1"]:focus {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+#resultado-final {
+  position: absolute;
+  top: 362px;
+  margin: 0 auto;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+#resultado-final h3 {
+  text-align: center;
+  color: #c1d604;
+  font-size: 1.8rem;
+  margin: 0 auto;
+}
+
+#resultado-final p {
+  color: #f2f2f2;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 381px) and (max-width: 480px) {
+  
+  #img-start {
+    width: 60%;
+  }
+
+  #img-winner {
+    width: 85%;
+    height: 75%;
+  }
+  
+  .board {
+    height: 100%;
+  }
+  
+  .tile {
+    width: 22vw;
+    height: 90px;
+    margin: 3px;
+  }
+  
+  .tile span img {
+    width: 21vw;
+    height: 85px;
+  }
+  
+  .btn {
+    margin-top: 3rem;
+  }
+  
+  input[type="text"] {
+    position: absolute;
+    left: 154px;
+    bottom: 14px;
+    width: 55%;
+    font-size: 1rem;
+  }
+  
+  label {
+    margin-bottom: 1.25rem;
+    font-size: 1.3rem;
+  }
+  
+  #resultado-final {
+    top: 531px;
+  }
 }

@@ -10,10 +10,7 @@
         align-items: center;
       }
 
-      .titulo-base {
-        height: 30vh;
-        width: 100%;
-      }
+
 
 
 
@@ -23,10 +20,7 @@
         font-size: 1.4rem;
       }
 
-      .letras-teclado {
-        height: 33vh;
-        width: 100%;
-      }
+
 
       #word-container {
         text-align: center;
@@ -48,7 +42,7 @@
       #alphabet-container {
         display: flex;
         flex-wrap: wrap;
-        max-width: 90%;
+        width: 90%;
         margin: 0 auto;
         justify-content: center;
         align-items: center;
@@ -156,6 +150,17 @@
 
       /* Estilo para dispositivos móveis */
       @media only screen and (max-width: 380px) {
+
+        .titulo-base {
+          height: 30vh;
+          width: 100%;
+        }
+
+        .letras-teclado {
+          height: 35vh;
+          width: 100%;
+        }
+
         .img-logo {
           width: 100%;
           height: 8vh;
@@ -187,13 +192,13 @@
 
         /* Altera o tamanho e o espaçamento do container de letras */
         #alphabet-container {
-          max-width: 95%;
-          margin-bottom: 1rem;
+          width: 100%;
+          margin: 0px;
         }
 
         /* Aumenta o tamanho dos botões de letra */
         #alphabet-container button {
-          font-size: .4rem;
+          font-size: .6rem;
           margin: 0.1rem;
           padding: 0.6rem 0.8rem;
         }
@@ -211,6 +216,8 @@
 
         /* Altera o tamanho e o espaçamento do resultado */
         #result-container {
+          width: 100%;
+          height: 25vh;
           font-size: 1.2rem;
           margin: 0;
         }
@@ -290,23 +297,34 @@
         #corpo_forca {
           opacity: 0;
           top: 56px;
-          left: 112px;
+          left: 110px;
         }
 
         #pernaE_forca {
           opacity: 0;
           top: 88px;
-          left: 87px;
+          left: 85px;
         }
 
         #pernaD_forca {
           opacity: 0;
-          top: 88px;
+          top: 86px;
           left: 138px;
         }
       }
 
       @media only screen and (min-width: 381px) and (max-width: 460px) {
+
+        .titulo-base {
+          height: 35vh;
+          width: 100%;
+        }
+
+        .letras-teclado {
+          height: 30vh;
+          width: 100%;
+        }
+
         .img-logo {
           width: 100%;
           height: 8vh;
@@ -338,13 +356,13 @@
 
         /* Altera o tamanho e o espaçamento do container de letras */
         #alphabet-container {
-          max-width: 99%;
-          margin-bottom: 0;
+          width: 100%;
+          margin: 0px;
         }
 
         /* Aumenta o tamanho dos botões de letra */
         #alphabet-container button {
-          font-size: .6rem;
+          font-size: .8rem;
           margin: 0.15rem;
           padding: 0.6rem 0.8rem;
         }
@@ -362,6 +380,8 @@
 
         /* Altera o tamanho e o espaçamento do resultado */
         #result-container {
+          width: 100%;
+          height: 25vh;
           font-size: 1.2rem;
           margin: 0;
         }
@@ -441,18 +461,18 @@
         #corpo_forca {
           opacity: 0;
           top: 54px;
-          left: 142px;
+          left: 140px;
         }
 
         #pernaE_forca {
           opacity: 0;
           top: 85px;
-          left: 117px;
+          left: 115px;
         }
 
         #pernaD_forca {
           opacity: 0;
           top: 85px;
-          left: 168px;
+          left: 166px;
         }
       }
