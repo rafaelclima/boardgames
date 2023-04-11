@@ -286,20 +286,44 @@ input[name="jogador1"]:focus {
   }
 
   .btn {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
+    width: 30%;
+    padding: 14px;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+  }
+
+  .input-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-basis: 300px;
+    width: 80%;
+    text-align: center;
+    align-items: center;
   }
 
   input[type="text"] {
-    position: absolute;
-    left: 45%;
-    bottom: -50%;
-    width: 40%;
+    position: static;
+    /* left: 45%; */
+    /* bottom: -50%; */
+    width: 80%;
     font-size: 1rem;
+    padding: 12px;
   }
 
   label {
-    margin-bottom: 1.25rem;
+    margin: 0px auto 10px auto;
     font-size: 1.3rem;
+    position: static;
   }
 
   #resultado-final {
