@@ -215,6 +215,10 @@ input[name="jogador1"]:focus {
     height: 75%;
   }
 
+  .board-box {
+    height: 53vh;
+  }
+
   .board {
     height: 100%;
   }
@@ -248,7 +252,7 @@ input[name="jogador1"]:focus {
   }
 
   #resultado-final {
-    top: 531px;
+    top: 67%;
   }
 }
 
