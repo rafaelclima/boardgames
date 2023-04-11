@@ -191,3 +191,63 @@ body {
 
 /* MEDIA QUERY */
 
+@media only screen and (min-width: 760px) and (max-width: 960px) {
+  .container {
+    width: 80%;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+  }
+
+  .animated-image {
+    width: 70%;
+    height: 85px;
+  }
+
+  .wellcome {
+    width: 80%;
+  }
+
+  .wellcome p {
+    font-size: 1.6rem;
+  }
+
+  .btn-next {
+    font-size: 1.3rem;
+    padding: 20px 24px;
+  }
+
+  .main-choose-game {
+    justify-content: space-around;
+  }
+
+  .tictactoe,
+  .forca,
+  .memory {
+    height: 33%;
+    padding: 30px;
+    justify-content: space-between;
+  }
+
+  .tictactoe p,
+  .forca p,
+  .memory p {
+    width: 95%;
+    font-size: 1rem;
+  }
+
+  .tictactoe img,
+  .forca img,
+  .memory img {
+    max-width: 50%;
+    height: 35%;
+  }
+
+  .btn-choose {
+    color: #fff;
+    width: 25%;
+    font-size: 1rem;
+    padding: 10px 16px;
+    border-radius: 10px;
+  }
+}
