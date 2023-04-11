@@ -1,478 +1,650 @@
-      body {
-        background-color: #1d1d1d;
-        color: #fff;
-        font-family: 'Open Sans', sans-serif;
-        /* overflow-y: hidden; */
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        /* justify-content: space-evenly; */
-        align-items: center;
-      }
-
-
-
-
-
-      .titulo-base h1 {
-        text-align: center;
-        margin: 10px 0px 0px 0px;
-        font-size: 1.4rem;
-      }
-
-
-
-      #word-container {
-        text-align: center;
-        font-size: 2rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-      }
-
-      #word-container span {
-        /* border-bottom: 2px solid #fff;
-        padding-bottom: 5px; */
-        margin-right: 0.8rem;
-      }
-
-      #word-container .hidden {
-        visibility: hidden;
-      }
-
-      #alphabet-container {
-        display: flex;
-        flex-wrap: wrap;
-        width: 90%;
-        margin: 0 auto;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 2rem;
-        /* flex-grow: 1; */
-      }
-
-      #alphabet-container button {
-        background-color: #f63c489f;
-        color: #fff;
-        font-size: 1.5rem;
-        border: none;
-        border-radius: 0.5rem;
-        margin: 1rem;
-        padding: 1rem 1.2rem;
-        cursor: pointer;
-      }
-
-      #alphabet-container button:hover {
-        background-color: #555;
-      }
-
-      #lives-container {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      #lives-container #main_img img {
-        width: 340px;
-        height: 300px;
-      }
-
-      #lives-container #boneco_forca img {
-        width: 3.8rem;
-        height: 3.8rem;
-        margin: 0 0.5rem;
-      }
-
-      #result-container {
-        height: 15vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        text-align: center;
-        font-size: 2rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-      }
-
-      #result-container button {
-        background-color: #f63c48;
-        color: #fff;
-        font-size: 1.2rem;
-        border: none;
-        border-radius: 0.5rem;
-        margin-top: .5rem;
-        padding: 0.5rem 1rem;
-        cursor: pointer;
-      }
-
-      #result-container button:hover {
-        background-color: #555;
-      }
-
-      #main_img {
-        position: relative;
-      }
-
-      #cabeca_forca,
-      #corpo_forca,
-      #pernaE_forca,
-      #pernaD_forca {
-        position: absolute;
-      }
-
-      #cabeca_forca {
-        opacity: 0;
-        top: 65px;
-        left: 196px;
-      }
-
-      #corpo_forca {
-        opacity: 0;
-        top: 120px;
-        left: 196px;
-      }
-
-      #pernaE_forca {
-        opacity: 0;
-        top: 180px;
-        left: 162px;
-      }
-
-      #pernaD_forca {
-        opacity: 0;
-        top: 180px;
-        left: 230px;
-      }
-
-      /* Estilo para dispositivos móveis */
-      @media only screen and (max-width: 380px) {
-
-        .titulo-base {
-          height: 30vh;
-          width: 100%;
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
         }
 
-        .letras-teclado {
-          height: 35vh;
+        body {
+          background-color: #1d1d1d;
+          color: #fff;
+          font-family: 'Open Sans', sans-serif;
+          /* overflow-y: hidden; */
+          height: 100vh;
           width: 100%;
+          display: flex;
+          flex-direction: column;
+          /* justify-content: space-evenly; */
+          align-items: center;
         }
 
-        .img-logo {
-          width: 100%;
-          height: 8vh;
+        .titulo-base h1 {
           text-align: center;
-          margin: 0 auto;
-        }
-
-        .img-logo img {
-          width: 70%;
-          height: 45px;
-          margin-top: 8px;
-        }
-
-        #base-forca {
-          background-image: url('img/main_forca.png');
-          width: 195px;
-          height: 140px;
-          background-size: cover;
-          background-position: center;
-          transition: background-image 1s ease;
-        }
-
-        #word-container {
+          margin: 10px 0px 0px 0px;
           font-size: 1.4rem;
-          width: 99%;
-          margin-top: .8rem;
-          margin-bottom: 1rem;
         }
 
-        /* Altera o tamanho e o espaçamento do container de letras */
-        #alphabet-container {
-          width: 100%;
-          margin: 0px;
-        }
 
-        /* Aumenta o tamanho dos botões de letra */
-        #alphabet-container button {
-          font-size: .6rem;
-          margin: 0.1rem;
-          padding: 0.6rem 0.8rem;
-        }
-
-        #lives-container {
-          margin-bottom: 0;
-        }
-
-        /* Reduz o tamanho dos ícones de vidas */
-        #lives-container #boneco_forca img {
-          width: 2.8rem;
-          height: 2rem;
-          margin: 0 0.1rem;
-        }
-
-        /* Altera o tamanho e o espaçamento do resultado */
-        #result-container {
-          width: 100%;
-          height: 25vh;
-          font-size: 1.2rem;
-          margin: 0;
-        }
-
-        #dica_chance {
-          display: flex;
-          max-width: 95vw;
-          /* align-items: center; */
-          /* justify-content: center; */
-          justify-content: center;
-          margin-bottom: .5rem;
-          margin-top: .5rem;
-        }
-
-        #div_dica {
-          text-align: center;
-          width: 75vw;
-          padding: .6rem .6rem;
-          height: 2.5rem;
-          border: 1px solid whitesmoke;
-          border-radius: 10px;
-          font-size: .8rem;
-        }
-
-        #div_chances {
-          width: 15vw;
-          text-align: center;
-          padding: .6rem .5rem;
-          margin-left: .1rem;
-          height: 2.5rem;
-          border: 1px solid whitesmoke;
-          border-radius: 10px;
-          font-size: .8rem;
-        }
-
-        #div_dica>h3 {
-          font-size: 1rem;
-          line-height: 0;
-          margin-top: .2rem;
-        }
-
-        #div_chances>h3 {
-          font-size: .8rem;
-          line-height: 0;
-          margin-top: .2rem;
-        }
-
-        #span_dica {
-          font-size: .8rem;
-        }
-
-        #span_chances {
-          font-size: 1.2rem;
-        }
-
-        /* Altera o tamanho dos botões do resultado */
-        #result-container button {
-          font-size: 1.2rem;
-          padding: 0.5rem 0.8rem;
-        }
-
-        /* Altera o tamanho da imagem de cada parte do boneco da forca */
-        #cabeca_forca,
-        #corpo_forca,
-        #pernaE_forca,
-        #pernaD_forca {
-          width: 10px;
-          height: 10px;
-        }
-
-        #cabeca_forca {
-          opacity: 0;
-          top: 26px;
-          left: 110px;
-        }
-
-        #corpo_forca {
-          opacity: 0;
-          top: 56px;
-          left: 110px;
-        }
-
-        #pernaE_forca {
-          opacity: 0;
-          top: 88px;
-          left: 85px;
-        }
-
-        #pernaD_forca {
-          opacity: 0;
-          top: 86px;
-          left: 138px;
-        }
-      }
-
-      @media only screen and (min-width: 381px) and (max-width: 460px) {
-
-        .titulo-base {
-          height: 35vh;
-          width: 100%;
-        }
-
-        .letras-teclado {
-          height: 30vh;
-          width: 100%;
-        }
-
-        .img-logo {
-          width: 100%;
-          height: 8vh;
-          text-align: center;
-          margin: 0 auto;
-        }
-
-        .img-logo img {
-          width: 70%;
-          height: 45px;
-          margin-top: 8px;
-        }
-
-        #base-forca {
-          background-image: url('img/main_forca.png');
-          width: 235px;
-          height: 170px;
-          background-size: cover;
-          background-position: center;
-          transition: background-image 1s ease;
-        }
 
         #word-container {
-          font-size: 1.6rem;
-          width: 99%;
-          margin-top: .8rem;
-          margin-bottom: 1rem;
+          text-align: center;
+          font-size: 2rem;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
         }
 
-        /* Altera o tamanho e o espaçamento do container de letras */
+        #word-container span {
+          /* border-bottom: 2px solid #fff;
+        padding-bottom: 5px; */
+          margin-right: 0.8rem;
+        }
+
+        #word-container .hidden {
+          visibility: hidden;
+        }
+
         #alphabet-container {
-          width: 100%;
-          margin: 0px;
+          display: flex;
+          flex-wrap: wrap;
+          width: 90%;
+          margin: 0 auto;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 2rem;
+          /* flex-grow: 1; */
         }
 
-        /* Aumenta o tamanho dos botões de letra */
         #alphabet-container button {
-          font-size: .8rem;
-          margin: 0.15rem;
-          padding: 0.6rem 0.8rem;
+          background-color: #f63c489f;
+          color: #fff;
+          font-size: 1.5rem;
+          border: none;
+          border-radius: 0.5rem;
+          margin: 1rem;
+          padding: 1rem 1.2rem;
+          cursor: pointer;
+        }
+
+        #alphabet-container button:hover {
+          background-color: #555;
         }
 
         #lives-container {
-          margin-bottom: 0;
-        }
-
-        /* Reduz o tamanho dos ícones de vidas */
-        #lives-container #boneco_forca img {
-          width: 2.8rem;
-          height: 2rem;
-          margin: 0 0.1rem;
-        }
-
-        /* Altera o tamanho e o espaçamento do resultado */
-        #result-container {
           width: 100%;
-          height: 25vh;
-          font-size: 1.2rem;
-          margin: 0;
-        }
-
-        #dica_chance {
+          height: 100%;
           display: flex;
-          max-width: 95vw;
-          /* align-items: center; */
-          /* justify-content: center; */
+          flex-direction: column;
+          align-items: center;
           justify-content: center;
-          margin-bottom: .5rem;
-          margin-top: .5rem;
         }
 
-        #div_dica {
+        #lives-container #main_img img {
+          width: 340px;
+          height: 300px;
+        }
+
+        #lives-container #boneco_forca img {
+          width: 3.8rem;
+          height: 3.8rem;
+          margin: 0 0.5rem;
+        }
+
+        #result-container {
+          height: 15vh;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
           text-align: center;
-          width: 75vw;
-          padding: .6rem .6rem;
-          height: 2.5rem;
-          border: 1px solid whitesmoke;
-          border-radius: 10px;
-          font-size: .8rem;
+          font-size: 2rem;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
         }
 
-        #div_chances {
-          width: 15vw;
-          text-align: center;
-          padding: .6rem .5rem;
-          margin-left: .1rem;
-          height: 2.5rem;
-          border: 1px solid whitesmoke;
-          border-radius: 10px;
-          font-size: .8rem;
-        }
-
-        #div_dica>h3 {
-          font-size: 1rem;
-          line-height: 0;
-          margin-top: .2rem;
-        }
-
-        #div_chances>h3 {
-          font-size: .8rem;
-          line-height: 0;
-          margin-top: .2rem;
-        }
-
-        #span_dica {
-          font-size: .8rem;
-        }
-
-        #span_chances {
-          font-size: 1.2rem;
-        }
-
-        /* Altera o tamanho dos botões do resultado */
         #result-container button {
+          background-color: #f63c48;
+          color: #fff;
           font-size: 1.2rem;
-          padding: 0.5rem 0.8rem;
+          border: none;
+          border-radius: 0.5rem;
+          margin-top: .5rem;
+          padding: 0.5rem 1rem;
+          cursor: pointer;
         }
 
-        /* Altera o tamanho da imagem de cada parte do boneco da forca */
+        #result-container button:hover {
+          background-color: #555;
+        }
+
+        #main_img {
+          position: relative;
+        }
+
         #cabeca_forca,
         #corpo_forca,
         #pernaE_forca,
         #pernaD_forca {
-          width: 10px;
-          height: 10px;
+          position: absolute;
         }
 
         #cabeca_forca {
           opacity: 0;
-          top: 28px;
-          left: 140px;
+          top: 65px;
+          left: 196px;
         }
 
         #corpo_forca {
           opacity: 0;
-          top: 54px;
-          left: 140px;
+          top: 120px;
+          left: 196px;
         }
 
         #pernaE_forca {
           opacity: 0;
-          top: 85px;
-          left: 115px;
+          top: 180px;
+          left: 162px;
         }
 
         #pernaD_forca {
           opacity: 0;
-          top: 85px;
-          left: 166px;
+          top: 180px;
+          left: 230px;
         }
-      }
+
+        /* Estilo para dispositivos móveis */
+        @media only screen and (max-width: 380px) {
+
+          .titulo-base {
+            height: 30vh;
+            width: 100%;
+          }
+
+          .letras-teclado {
+            height: 35vh;
+            width: 100%;
+          }
+
+          .img-logo {
+            width: 100%;
+            height: 8vh;
+            text-align: center;
+            margin: 0 auto;
+          }
+
+          .img-logo img {
+            width: 70%;
+            height: 45px;
+            margin-top: 8px;
+          }
+
+          #base-forca {
+            background-image: url('img/main_forca.png');
+            width: 195px;
+            height: 140px;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease;
+          }
+
+          #word-container {
+            font-size: 1.4rem;
+            width: 99%;
+            margin-top: .8rem;
+            margin-bottom: 1rem;
+          }
+
+          /* Altera o tamanho e o espaçamento do container de letras */
+          #alphabet-container {
+            width: 100%;
+            margin: 0px;
+          }
+
+          /* Aumenta o tamanho dos botões de letra */
+          #alphabet-container button {
+            font-size: .6rem;
+            margin: 0.1rem;
+            padding: 0.6rem 0.8rem;
+          }
+
+          #lives-container {
+            margin-bottom: 0;
+          }
+
+          /* Reduz o tamanho dos ícones de vidas */
+          #lives-container #boneco_forca img {
+            width: 2.8rem;
+            height: 2rem;
+            margin: 0 0.1rem;
+          }
+
+          /* Altera o tamanho e o espaçamento do resultado */
+          #result-container {
+            width: 100%;
+            height: 25vh;
+            font-size: 1.2rem;
+            margin: 0;
+          }
+
+          #dica_chance {
+            display: flex;
+            width: 95vw;
+            height: 8vh;
+            /* align-items: center; */
+            /* justify-content: center; */
+            justify-content: center;
+            margin-bottom: .5rem;
+            margin-top: .5rem;
+          }
+
+          #div_dica {
+            text-align: center;
+            width: 75%;
+            padding: .2rem .2rem;
+            height: 100%;
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+            font-size: .8rem;
+          }
+
+          #div_chances {
+            width: 20%;
+            text-align: center;
+            padding: .2rem .2rem;
+            margin-left: .1rem;
+            height: 100%;
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+            font-size: .8rem;
+          }
+
+          #div_dica>h3 {
+            font-size: 1rem;
+            line-height: 0;
+            margin: 8px auto;
+          }
+
+          #div_chances>h3 {
+            font-size: .8rem;
+            line-height: 0;
+            margin: 8px auto;
+          }
+
+          #span_dica {
+            font-size: .8rem;
+          }
+
+          #span_chances {
+            font-size: 1.2rem;
+          }
+
+          /* Altera o tamanho dos botões do resultado */
+          #result-container button {
+            font-size: 1.2rem;
+            padding: 0.5rem 0.8rem;
+          }
+
+          /* Altera o tamanho da imagem de cada parte do boneco da forca */
+          #cabeca_forca,
+          #corpo_forca,
+          #pernaE_forca,
+          #pernaD_forca {
+            width: 10px;
+            height: 10px;
+          }
+
+          #cabeca_forca {
+            opacity: 0;
+            top: 26px;
+            left: 110px;
+          }
+
+          #corpo_forca {
+            opacity: 0;
+            top: 56px;
+            left: 110px;
+          }
+
+          #pernaE_forca {
+            opacity: 0;
+            top: 88px;
+            left: 85px;
+          }
+
+          #pernaD_forca {
+            opacity: 0;
+            top: 86px;
+            left: 138px;
+          }
+        }
+
+        @media only screen and (min-width: 381px) and (max-width: 460px) {
+
+          .titulo-base {
+            height: 32vh;
+            width: 100%;
+          }
+
+          .letras-teclado {
+            height: 30vh;
+            width: 100%;
+          }
+
+          .img-logo {
+            width: 100%;
+            height: 8vh;
+            text-align: center;
+            margin: 0 auto;
+          }
+
+          .img-logo img {
+            width: 70%;
+            height: 45px;
+            margin-top: 8px;
+          }
+
+          #base-forca {
+            background-image: url('img/main_forca.png');
+            width: 235px;
+            height: 170px;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease;
+          }
+
+          #word-container {
+            font-size: 1.6rem;
+            width: 99%;
+            margin-top: .8rem;
+            margin-bottom: 1rem;
+          }
+
+          /* Altera o tamanho e o espaçamento do container de letras */
+          #alphabet-container {
+            width: 100%;
+            margin: 0px;
+          }
+
+          /* Aumenta o tamanho dos botões de letra */
+          #alphabet-container button {
+            font-size: .8rem;
+            margin: 0.15rem;
+            padding: 0.6rem 0.8rem;
+          }
+
+          #lives-container {
+            margin-bottom: 0;
+          }
+
+          /* Reduz o tamanho dos ícones de vidas */
+          #lives-container #boneco_forca img {
+            width: 2.8rem;
+            height: 2rem;
+            margin: 0 0.1rem;
+          }
+
+          /* Altera o tamanho e o espaçamento do resultado */
+          #result-container {
+            width: 100%;
+            height: 30vh;
+            font-size: 1.2rem;
+            margin: 0;
+            justify-content: center;
+          }
+
+          #dica_chance {
+            display: flex;
+            width: 95vw;
+            height: 8vh;
+            /* align-items: center; */
+            /* justify-content: center; */
+            justify-content: center;
+            margin-bottom: .5rem;
+            margin-top: .5rem;
+          }
+
+          #div_dica {
+            text-align: center;
+            width: 75%;
+            padding: .2rem .2rem;
+            height: 100%;
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+            font-size: .8rem;
+          }
+
+          #div_chances {
+            width: 25%;
+            text-align: center;
+            padding: .2rem .2rem;
+            margin-left: .1rem;
+            height: 100%;
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+            font-size: .8rem;
+          }
+
+          #div_dica>h3 {
+            font-size: 1rem;
+            line-height: 0;
+            margin: 12px auto;
+          }
+
+          #div_chances>h3 {
+            font-size: .8rem;
+            line-height: 0;
+            margin: 12px auto;
+          }
+
+          #span_dica {
+            font-size: .8rem;
+          }
+
+          #span_chances {
+            font-size: 1.2rem;
+          }
+
+          /* Altera o tamanho dos botões do resultado */
+          #result-container button {
+            font-size: 1.2rem;
+            padding: 0.5rem 0.8rem;
+          }
+
+          /* Altera o tamanho da imagem de cada parte do boneco da forca */
+          #cabeca_forca,
+          #corpo_forca,
+          #pernaE_forca,
+          #pernaD_forca {
+            width: 10px;
+            height: 10px;
+          }
+
+          #cabeca_forca {
+            opacity: 0;
+            top: 28px;
+            left: 140px;
+          }
+
+          #corpo_forca {
+            opacity: 0;
+            top: 54px;
+            left: 140px;
+          }
+
+          #pernaE_forca {
+            opacity: 0;
+            top: 85px;
+            left: 115px;
+          }
+
+          #pernaD_forca {
+            opacity: 0;
+            top: 85px;
+            left: 166px;
+          }
+        }
+
+        @media only screen and (min-width: 660px) and (max-width: 960px) {
+          .titulo-base {
+            height: 35vh;
+            width: 100%;
+          }
+
+          .letras-teclado {
+            height: 30vh;
+            width: 100%;
+          }
+
+          .img-logo {
+            width: 65%;
+            height: 6vh;
+            text-align: center;
+            margin: 1rem auto 1rem auto;
+          }
+
+          .img-logo img {
+            width: 90%;
+            height: 80%;
+          }
+
+          #base-forca {
+            background-image: url('img/main_forca.png');
+            width: 350px;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease;
+          }
+
+          #word-container {
+            font-size: 2.3rem;
+            width: 90%;
+            margin: 0px auto 1.5rem auto;
+          }
+
+          #word-container span {
+            margin-right: 1rem;
+          }
+
+          #word-container span:last-child {
+            margin-right: 0;
+          }
+
+          /* Altera o tamanho e o espaçamento do container de letras */
+          #alphabet-container {
+            width: 89%;
+            margin: 0 auto;
+          }
+
+          /* Aumenta o tamanho dos botões de letra */
+          #alphabet-container button {
+            font-size: 1.2rem;
+            margin: 0.3rem;
+            padding: 0.8rem 1rem;
+          }
+
+          #lives-container {
+            margin-bottom: 0;
+          }
+
+          /* Reduz o tamanho dos ícones de vidas */
+          #lives-container #boneco_forca img {
+            width: 4.5rem;
+            height: 4rem;
+            margin: 0 auto;
+          }
+
+          /* Altera o tamanho e o espaçamento do resultado */
+          #result-container {
+            width: 100%;
+            height: 25vh;
+            font-size: 1.2rem;
+            margin: 0;
+          }
+
+          #dica_chance {
+            display: flex;
+            width: 70vw;
+            height: 8vh;
+            justify-content: center;
+            margin-bottom: .5rem;
+            margin-top: .5rem;
+          }
+
+          #div_dica {
+            text-align: center;
+            width: 75%;
+            padding: .6rem .6rem;
+            height: 100%;
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+          }
+
+          #div_chances {
+            width: 20%;
+            text-align: center;
+            padding: .6rem .5rem;
+            margin-left: .1rem;
+            height: 100%;
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+          }
+
+          #div_dica>h3 {
+            font-size: 1.5rem;
+            line-height: 0;
+            margin: 14px auto;
+          }
+
+          #div_chances>h3 {
+            font-size: 1.2rem;
+            line-height: 0;
+            margin: 14px auto;
+          }
+
+          #span_dica {
+            font-size: 1.1rem;
+          }
+
+          #span_chances {
+            font-size: 1.5rem;
+          }
+
+          #result-container button {
+            font-size: 1.3rem;
+            padding: 0.8rem 1rem;
+          }
+
+          /* Altera o tamanho da imagem de cada parte do boneco da forca */
+          #cabeca_forca,
+          #corpo_forca,
+          #pernaE_forca,
+          #pernaD_forca {
+            width: 10px;
+            height: 10px;
+          }
+
+          #cabeca_forca {
+            opacity: 0;
+            top: 38px;
+            left: 205px;
+          }
+
+          #corpo_forca {
+            opacity: 0;
+            top: 94px;
+            left: 205px;
+          }
+
+          #pernaE_forca {
+            opacity: 0;
+            top: 155px;
+            left: 165px;
+          }
+
+          #pernaD_forca {
+            opacity: 0;
+            top: 156px;
+            left: 248px;
+          }
+
+        }

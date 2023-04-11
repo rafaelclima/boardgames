@@ -160,9 +160,11 @@ label {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
@@ -172,6 +174,7 @@ label[for="jogador2"]:focus,
 input[name="jogador2"]:focus {
   animation: pulse 1s ease-in-out infinite;
 }
+
 label[for="jogador1"]:focus,
 input[name="jogador1"]:focus {
   animation: pulse 1s ease-in-out infinite;
@@ -202,7 +205,7 @@ input[name="jogador1"]:focus {
 /* MEDIA QUERY */
 
 @media screen and (min-width: 381px) and (max-width: 480px) {
-  
+
   #img-start {
     width: 60%;
   }
@@ -211,26 +214,26 @@ input[name="jogador1"]:focus {
     width: 85%;
     height: 75%;
   }
-  
+
   .board {
     height: 100%;
   }
-  
+
   .tile {
     width: 22vw;
     height: 90px;
     margin: 3px;
   }
-  
+
   .tile span img {
     width: 21vw;
     height: 85px;
   }
-  
+
   .btn {
     margin-top: 3rem;
   }
-  
+
   input[type="text"] {
     position: absolute;
     left: 154px;
@@ -238,13 +241,70 @@ input[name="jogador1"]:focus {
     width: 55%;
     font-size: 1rem;
   }
-  
+
   label {
     margin-bottom: 1.25rem;
     font-size: 1.3rem;
   }
-  
+
   #resultado-final {
     top: 531px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 960px) {
+  #img-start {
+    width: 45%;
+  }
+
+  .logo-img img {
+    height: 70px;
+  }
+
+  #img-winner {
+    width: 80%;
+    height: 86%;
+  }
+
+  .board-box {
+    height: 52vh;
+  }
+
+  .board {
+    height: 100%;
+  }
+
+  .tile {
+    width: 21vw;
+    height: 120px;
+    margin: 5px;
+  }
+
+  .tile span img {
+    width: 20vw;
+    height: 110px;
+  }
+
+  .btn {
+    margin-top: 3rem;
+  }
+
+  input[type="text"] {
+    position: absolute;
+    left: 45%;
+    bottom: -50%;
+    width: 40%;
+    font-size: 1rem;
+  }
+
+  label {
+    margin-bottom: 1.25rem;
+    font-size: 1.3rem;
+  }
+
+  #resultado-final {
+    top: 65%;
+    width: 50%;
+    height: 12vh;
   }
 }
