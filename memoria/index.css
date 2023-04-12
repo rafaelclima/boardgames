@@ -271,22 +271,26 @@ input[name="jogador1"]:focus {
   }
 
   .board-box {
-    height: 52vh;
+    height: 50vh;
   }
 
   .board {
+    height: 90%;
+  }
+
+  .memory-item {
     height: 100%;
   }
 
   .tile {
     width: 21vw;
-    height: 120px;
+    height: 25%;
     margin: 5px;
   }
 
   .tile span img {
     width: 20vw;
-    height: 110px;
+    height: 95%;
   }
 
   .btn {
