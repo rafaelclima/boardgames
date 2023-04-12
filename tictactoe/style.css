@@ -108,7 +108,8 @@ input[type="text"]::placeholder {
   color: #fff;
 }
 
-.timeP1, .timeP2 {
+.timeP1,
+.timeP2 {
   animation: pulse 0.5s ease-in-out infinite alternate;
 }
 
@@ -322,5 +323,179 @@ button:hover {
     padding: 16px;
     margin: 40px 0px 5px 0px;
     font-size: 1.5rem;
+  }
+}
+
+/* LAPTOP-DESKTOP >= 1024 < 1200 */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .logo-img {
+    width: 25%;
+    margin: 32px 0px 32px 0px;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+    text-align: center;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  .game {
+    display: block;
+    height: calc(100vh - 128px);
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .board {
+    width: 80%;
+    height: 65%;
+    margin: 0 auto;
+    border: 3px solid #fff;
+  }
+
+  .cell {
+    flex-basis: 33%;
+    height: 34%;
+    margin: -2px 0 0 1px;
+    border: 4px solid #fff;
+  }
+
+  .players {
+    width: 80%;
+    height: 30%;
+    margin: 12px auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .form-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    align-items: center;
+  }
+
+  .form-group:nth-child(1) {
+    margin-bottom: 16px;
+  }
+
+  .form-player label {
+    display: inline;
+    width: 25%;
+  }
+
+  input[type="text"] {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f63c48;
+    color: #fff;
+    margin: 0 10px;
+  }
+
+  #new-game {
+    width: 50%;
+    border-radius: 20px;
+    margin-top: 0px;
+  }
+
+
+}
+
+
+/* LAPTOP-DESKTOP >= 1200 */
+@media (min-width: 1200px) {
+  .logo-img {
+    width: 15%;
+    margin: 32px 0px 32px 0px;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+    text-align: center;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  .game {
+    display: block;
+    height: calc(100vh - 132px);
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .board {
+    width: 92%;
+    height: 67%;
+    margin: 0 auto;
+    border: 3px solid #fff;
+  }
+
+  .cell {
+    flex-basis: 33%;
+    height: 34%;
+    margin: -2px 0 0 1px;
+    border: 4px solid #fff;
+  }
+
+  .cell.o::before,
+  .cell.x::before {
+    font-size: 5rem;
+  }
+
+  .players {
+    width: 80%;
+    height: 30%;
+    margin: 12px auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .form-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    align-items: center;
+  }
+
+  .form-group:nth-child(1) {
+    margin-bottom: 16px;
+  }
+
+  .form-player label {
+    display: inline;
+    width: 25%;
+  }
+
+  input[type="text"] {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f63c48;
+    color: #fff;
+    margin: 0 10px;
+  }
+
+  #new-game {
+    width: 50%;
+    border-radius: 20px;
+    margin-top: 0px;
   }
 }
