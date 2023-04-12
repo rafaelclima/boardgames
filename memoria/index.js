@@ -88,6 +88,8 @@ function startGame() {
 
   imgStart.style.zIndex = '-5'
   imgStart.style.opacity = '0'
+  player1.readOnly = true;
+  player2.readOnly = true;
   player1.focus()
 
 }
