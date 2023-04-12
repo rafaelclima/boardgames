@@ -191,7 +191,8 @@ body {
 
 /* MEDIA QUERY */
 
-@media only screen and (min-width: 760px) and (max-width: 960px) {
+/* TABLET PORTRAIT */
+@media (min-width: 760px) and (max-width: 960px) {
   .container {
     width: 80%;
     top: 5%;
@@ -251,3 +252,95 @@ body {
     border-radius: 10px;
   }
 }
+
+/* LAPTOP-DESKTOP >= 1024 < 1200 */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .container {
+    width: 50%;
+    height: 80px;
+  }
+
+  .animated-image {
+    width: 65%;
+  }
+
+  .wellcome {
+    width: 50%;
+  }
+
+  .wellcome p {
+    font-size: 1.2rem;
+    margin: 0 auto;
+  }
+
+  .btn-next {
+    width: 20%;
+  }
+
+  .main-choose-game {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+  }
+
+  .tictactoe,
+  .forca,
+  .memory {
+    opacity: 0;
+    visibility: hidden;
+    /* border: 1px solid #f63c4864; */
+    box-shadow: none;
+    height: 90%;
+    width: 33%;
+    min-width: 0;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: opacity 1.3s ease-in-out;
+  }
+
+  .forca {
+    border-bottom-width: 0;
+    border-top-width: 0;
+    border-right: .5px solid #f63c4864;
+    border-left: .5px solid #f63c4864;
+    box-shadow: inset 1.5px 0 rgba(246, 60, 72, 0.5), inset -1.5px 0 rgba(246, 60, 72, 0.5);
+  }
+
+  .tictactoe img,
+  .forca img,
+  .memory img {
+    max-width: 100%;
+    width: 50%;
+    height: 20%;
+  }
+
+  .tictactoe p,
+  .forca p,
+  .memory p {
+    width: 100%;
+    font-size: .9rem;
+    line-height: 1.4;
+    text-align: justify;
+    letter-spacing: 0.2px;
+  }
+
+  .btn-choose {
+    width: 50%;
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+
+}
+
+/* LAPTOP-DESKTOP >= 1200 */
