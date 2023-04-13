@@ -129,7 +129,6 @@ const arrPalavras = [
 const palavraSorteada = Math.floor(Math.random() * arrPalavras.length)
 let chances = 4
 let tamanhoPalavra = 0
-console.log(arrPalavras[palavraSorteada].palavra)
 
 const spanLetraOculta = document.getElementById('word-container')
 const spanChances = document.getElementById('span_chances')
@@ -244,7 +243,7 @@ function telaVitoria() {
   // Muda a imagem do background
   setTimeout(function() {
   retirarBaseForca.style.backgroundImage = "url(img/donkey_celebration.gif)";
-  document.querySelector("#base-forca").style.width = "80vw";
+  document.querySelector("#base-forca").style.width = "50vw";
   retiraDicaChance.style.display = 'none'
   }, 100)
 
@@ -281,7 +280,7 @@ function telaDerrota() {
   // Muda a imagem do background
   setTimeout(function() {
     retirarBaseForca.style.backgroundImage = "url(img/pikachu_sad.gif)";
-    document.querySelector("#base-forca").style.width = "80vw";
+    document.querySelector("#base-forca").style.width = "50vw";
   }, 100)
 
 // document.querySelector("#base-forca").style.width = "80vw";
