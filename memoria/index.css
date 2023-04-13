@@ -340,3 +340,186 @@ input[name="jogador1"]:focus {
     height: 12vh;
   }
 }
+
+@media screen and (min-width: 961px) and (max-width: 1199px) {
+  #img-start {
+    width: 45%;
+  }
+
+  .logo-img img {
+    height: 70px;
+  }
+
+  #img-winner {
+    width: 78%;
+    height: 93%;
+    top: 8%;
+  }
+
+  .board-box {
+    height: 50vh;
+  }
+
+  .board {
+    height: 90%;
+    width: 70vw;
+  }
+
+  .memory-item {
+    height: 100%;
+  }
+
+  .tile {
+    width: 15vw;
+    height: 25%;
+    margin: 5px;
+  }
+
+  .tile span img {
+    width: 14.5vw;
+    height: 95%;
+  }
+
+  .btn {
+    margin-top: 2.5rem;
+    width: 30%;
+    padding: 14px;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+  }
+
+  .input-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-basis: 300px;
+    width: 80%;
+    text-align: center;
+    align-items: center;
+  }
+
+  input[type="text"] {
+    position: static;
+    /* left: 45%; */
+    /* bottom: -50%; */
+    width: 80%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  label {
+    margin: 0px auto 10px auto;
+    font-size: 1.3rem;
+    position: static;
+  }
+
+  #resultado-final {
+    top: 65%;
+    width: 50%;
+    height: 12vh;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #img-start {
+    width: 45%;
+  }
+
+  .logo-img img {
+    height: 85px;
+    width: 35%;
+  }
+
+  #img-winner {
+    width: 78%;
+    height: 93%;
+    top: 8%;
+  }
+
+  #memory-game {
+    height: calc(100vh - 121px);
+  }
+
+  .board-box {
+    height: 50vh;
+    width: 100%;
+  }
+
+  .board {
+    height: 80%;
+    width: 35vw;
+    top: 28%;
+  }
+
+  .memory-item {
+    height: 100%;
+  }
+
+  .tile {
+    width: 7vw;
+    height: 25%;
+    margin: 5px;
+  }
+
+  .tile span img {
+    width: 6.6vw;
+    height: 95%;
+  }
+
+  .btn {
+    margin-top: 2.5rem;
+    width: 30%;
+    padding: 14px;
+  }
+
+  form {
+    top: 62%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    position: absolute;
+  }
+
+  .input-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-basis: 300px;
+    width: 80%;
+    text-align: center;
+    align-items: center;
+  }
+
+  input[type="text"] {
+    position: static;
+    /* left: 45%; */
+    /* bottom: -50%; */
+    width: 80%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  label {
+    margin: 0px auto 10px auto;
+    font-size: 1.3rem;
+    position: static;
+  }
+
+  #resultado-final {
+    top: 62%;
+    width: 50%;
+    height: 12vh;
+  }
+}
